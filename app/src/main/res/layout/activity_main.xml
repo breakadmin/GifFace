@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pers.lbreak.gifface.MainActivity"
+    android:orientation="vertical">
+<TextView
+    android:id="@+id/face"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="	"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="vertical">
+    <pers.lbreak.emoji.view.EmojiEditText
+        android:id="@+id/input"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_width="match_parent"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:inputType="textImeMultiLine"
+        android:imeOptions="actionSend"
+        android:textScaleX="1.2"
+        android:gravity="center|left"
+        android:hint="请输入"
+        android:textCursorDrawable="@null"
+        android:layout_height="wrap_content"/>
+
+    <pers.lbreak.emoji.view.MyViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="260dp" >
+
+
+    </pers.lbreak.emoji.view.MyViewPager>
+    <!--<fragment-->
+        <!--android:id="@+id/fragment"-->
+        <!--android:name="pers.lbreak.emoji.fragment.EmojiFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+  </LinearLayout>
+</RelativeLayout>

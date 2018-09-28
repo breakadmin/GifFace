@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="win_bg">#F2F2F2</color>
+    <!--控件点击时颜色-->
+    <color name="click_overlay_color">#d7d7db</color>
+    <!--半透明-->
+    <color name="middle_transparent">#40000000</color>
+    <color name="red_color">#CD2626</color>
+
+</resources>
