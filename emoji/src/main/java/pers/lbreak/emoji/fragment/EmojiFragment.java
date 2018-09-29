@@ -36,6 +36,7 @@ public class EmojiFragment extends Fragment {
     private RecyclerView rv;
     private MyAdapter adapter;
     private int emojiSize=25;
+    public EmojiUtils emojiUtils;
 
 
     /**
@@ -80,43 +81,11 @@ public class EmojiFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_face, null);
         initView(view);
-        final EmojiUtils emojiUtils = new EmojiUtils(getContext(), "\\[[\u4e00-\u9fa5\\w]+\\]");
+        emojiUtils = new EmojiUtils(getContext(), "\\[[\u4e00-\u9fa5\\w]+\\]");
         adapter = new MyAdapter(getContext(), emojiUtils.data);
         rv.setAdapter(adapter);
 
-        if (editText != null) {
-//
-//            //删除监听
-//            editText.setOnKeyListener(new View.OnKeyListener() {
-//
-//                @Override
-//                public boolean onKey(View v, int keyCode, KeyEvent event) {
-//                    if (keyCode == KeyEvent.KEYCODE_DEL) {
-//                        String text = editText.getText().toString();
-//                        if (!text.isEmpty()) {
-//                            int cursor = editText.getSelectionStart();
-//
-//                            if(editText.getText().charAt(cursor-1)==']'){
-//
-//                                for(Emoji emoji:emojiUtils.data){//判断是否表情
-//                                    if (emoji.getName().equals(text.substring( text.lastIndexOf('['),cursor))){
-//                                        editText.getText().delete(text.lastIndexOf("["), cursor);
-//                                        break;
-//                                    }
-//                                }
-//
-//                                Toast.makeText(getContext(), "emoji", Toast.LENGTH_SHORT).show();
-//                                return true;
-//                            }
-//
-//                        }
-//
-//                    }
-//                    return false;
-//                }
-//            });
 
-        }
         adapter.setFaceListener(new FaceListener() {
 
             @Override
