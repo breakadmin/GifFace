@@ -35,6 +35,10 @@ public class EmojiUtils {
     private Pattern pattern;
     public List<Emoji> data=init();
     Context context;
+
+    public EmojiUtils() {
+    }
+
     public EmojiUtils(Context context, String pattern) {
         this.context=context;
         this.pattern =Pattern.compile(pattern);

@@ -11,7 +11,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import pers.lbreak.emoji.adapter.MyFragmentAdapter;
+import pers.lbreak.emoji.emojiUtils.EmojiUtils;
 import pers.lbreak.emoji.fragment.EmojiFragment;
+import pers.lbreak.emoji.model.Emoji;
 import pers.lbreak.emoji.view.EmojiEditText;
 import pers.lbreak.emoji.view.MyViewPager;
 
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emoji);
         ButterKnife.bind(this);
+
 
 
 
