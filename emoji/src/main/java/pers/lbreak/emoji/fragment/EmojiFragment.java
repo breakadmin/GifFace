@@ -38,6 +38,7 @@ public class EmojiFragment extends Fragment {
     public EmojiUtils emojiUtils;
 
 
+
     /**
      * 初始化设置
      * @param editText  文本框
