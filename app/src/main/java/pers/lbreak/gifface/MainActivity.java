@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
         EmojiFragment fragment=new EmojiFragment();
         fragment.bind(input,face,25);
         data.add(fragment);

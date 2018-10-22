@@ -30,7 +30,6 @@ import pers.lbreak.emoji.view.EmojiEditText;
  * Created by 惠普 on 2018-03-10.
  */
 public class EmojiFragment extends Fragment {
-    private View view;
     private EditText editText;
     private TextView faceView;
     private RecyclerView rv;
@@ -59,27 +58,12 @@ public class EmojiFragment extends Fragment {
         this.editText = editText;
         this.emojiSize=emojiSize;
     }
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
 
-        if (view != null) {
-            view = null;
-            Toast.makeText(getContext(), "移除1", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        if (isVisibleToUser && view != null) {
-
-        }
-    }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_face, null);
+        View view = inflater.inflate(R.layout.fragment_face, null);
         initView(view);
         emojiUtils = new EmojiUtils(getContext(), "\\[[\u4e00-\u9fa5\\w]+\\]");
         adapter = new MyAdapter(getContext(), emojiUtils.data);
