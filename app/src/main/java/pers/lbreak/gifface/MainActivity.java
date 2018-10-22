@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
-
         EmojiFragment fragment=new EmojiFragment();
         fragment.bind(input,face,25);
         data.add(fragment);
